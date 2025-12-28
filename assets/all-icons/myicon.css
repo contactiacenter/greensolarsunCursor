@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("icomoon28a0.eot@74zehw");
+  src: url("icomoon28a0.eot@74zehw") format("embedded-opentype"),
+    url("icomoon28a0.ttf@74zehw") format("truetype"),
+    url("icomoon28a0.woff@74zehw") format("woff"),
+    url("icomoon28a0.svg@74zehw") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.my-icon {
+  font-family: "icomoon";
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-down:before {
+  content: "\e900";
+}
+.icon-angle-left:before {
+  content: "\e901";
+}
+.icon-angle-right:before {
+  content: "\e902";
+}
+.icon-arrow-top-right:before {
+  content: "\e903";
+}
+.icon-barrels:before {
+  content: "\e904";
+}
+.icon-calendar-days:before {
+  content: "\e905";
+}
+.icon-check-circle-2:before {
+  content: "\e906";
+}
+.icon-check-circle:before {
+  content: "\e907";
+}
+.icon-clock:before {
+  content: "\e908";
+}
+.icon-close:before {
+  content: "\e909";
+}
+.icon-co2:before {
+  content: "\e90a";
+}
+.icon-comments:before {
+  content: "\e90b";
+}
+.icon-download:before {
+  content: "\e90c";
+}
+.icon-electricity-p:before {
+  content: "\e90d";
+}
+.icon-energy-2:before {
+  content: "\e90e";
+}
+.icon-energy:before {
+  content: "\e90f";
+}
+.icon-envelope:before {
+  content: "\e910";
+}
+.icon-environment:before {
+  content: "\e911";
+}
+.icon-facebook:before {
+  content: "\e912";
+}
+.icon-global-warming-2:before {
+  content: "\e913";
+}
+.icon-global-warming:before {
+  content: "\e914";
+}
+.icon-green-energy:before {
+  content: "\e915";
+}
+.icon-green:before {
+  content: "\e916";
+}
+.icon-instagram:before {
+  content: "\e917";
+}
+.icon-linkedin-in:before {
+  content: "\e918";
+}
+.icon-location-dot:before {
+  content: "\e919";
+}
+.icon-magnifying-glass:before {
+  content: "\e91a";
+}
+.icon-minus:before {
+  content: "\e91b";
+}
+.icon-nuclear-energy:before {
+  content: "\e91c";
+}
+.icon-package:before {
+  content: "\e91d";
+}
+.icon-phone-2:before {
+  content: "\e91e";
+}
+.icon-phone:before {
+  content: "\e91f";
+}
+.icon-pinterest-p:before {
+  content: "\e920";
+}
+.icon-play-t:before {
+  content: "\e921";
+}
+.icon-plus:before {
+  content: "\e922";
+}
+.icon-quotation-down-left:before {
+  content: "\e923";
+}
+.icon-quotation-down-right:before {
+  content: "\e924";
+}
+.icon-quotation-up-left:before {
+  content: "\e925";
+}
+.icon-quotation-up-right:before {
+  content: "\e926";
+}
+.icon-rechargeable:before {
+  content: "\e927";
+}
+.icon-recycle:before {
+  content: "\e928";
+}
+.icon-reliability:before {
+  content: "\e929";
+}
+.icon-solar-panel:before {
+  content: "\e92a";
+}
+.icon-star-solid:before {
+  content: "\e92b";
+}
+.icon-star:before {
+  content: "\e92c";
+}
+.icon-user:before {
+  content: "\e92d";
+}
+.icon-windmill:before {
+  content: "\e92e";
+}
+.icon-x-twitter:before {
+  content: "\e92f";
+}
