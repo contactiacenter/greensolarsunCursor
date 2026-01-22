@@ -1,0 +1,14 @@
+/* Augmentation de la taille des icônes "Validé" sur la page a-propos.html */
+
+.chackmark.v2 li .my-icon.icon-check-circle {
+    font-size: 2.2em !important;
+}
+
+.chackmark.v2 li i.my-icon.icon-check-circle {
+    font-size: 2.2em !important;
+}
+
+.chackmark.v2 li .icon-check-circle {
+    font-size: 2.2em !important;
+}
+

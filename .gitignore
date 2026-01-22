@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Fichiers de développement
+documentation/
+header_reference.html
+new_head_panneaux.txt
+METHODE_COPIE_HEADER.md
+_astro/
+
+# Fichiers temporaires
+*.tmp
+*.log

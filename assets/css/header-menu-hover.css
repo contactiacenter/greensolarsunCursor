@@ -1,0 +1,144 @@
+/* Effet de survol pour les liens du menu principal du header */
+/* Style similaire au carré vert avec bords arrondis utilisé ailleurs sur le site */
+/* UNIQUEMENT pour le menu principal, pas pour les sous-menus (dropdowns) */
+
+.menu-bar.v1 .main-menu > ul > li > a,
+.menu-bar.v2 .main-menu > ul > li > a {
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.menu-bar.v1 .main-menu > ul > li > a::before,
+.menu-bar.v2 .main-menu > ul > li > a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: calc(100% + 8px);
+    height: calc(100% + 4px);
+    background: var(--color-mint);
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.menu-bar.v1 .main-menu > ul > li > a:hover::before,
+.menu-bar.v2 .main-menu > ul > li > a:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Effet de survol pour le menu principal uniquement */
+.menu-bar.v1 .main-menu > ul > li > a:hover,
+.menu-bar.v2 .main-menu > ul > li > a:hover {
+    color: var(--color-deepTealGreen);
+}
+
+/* Garder l'effet vert sur le lien parent quand le dropdown est ouvert (survolé) */
+.menu-bar.v1 .main-menu > ul > li.has-dropdown:hover > a::before,
+.menu-bar.v2 .main-menu > ul > li.has-dropdown:hover > a::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.menu-bar.v1 .main-menu > ul > li.has-dropdown:hover > a,
+.menu-bar.v2 .main-menu > ul > li.has-dropdown:hover > a {
+    color: var(--color-deepTealGreen);
+}
+
+/* S'assurer que les dropdowns utilisent l'effet de survol original (du CSS de base) */
+/* En ne surchargeant pas avec une règle plus spécifique */
+
+/* Pour les éléments actifs du menu principal */
+.menu-bar.v1 .main-menu > ul > li.active > a::before,
+.menu-bar.v2 .main-menu > ul > li.active > a::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.menu-bar.v1 .main-menu > ul > li.active > a,
+.menu-bar.v2 .main-menu > ul > li.active > a {
+    color: var(--color-deepTealGreen);
+}
+
+/* Désactiver uniquement le carré vert (::before) pour les dropdowns */
+.menu-bar.v1 .main-menu ul ul li > a::before,
+.menu-bar.v2 .main-menu ul ul li > a::before {
+    display: none !important;
+}
+
+/* Restaurer explicitement l'effet de survol original des dropdowns */
+/* L'effet original : un fond coloré qui apparaît au survol avec un décalage du texte vers la droite */
+/* IMPORTANT : Ces règles doivent être APRÈS les règles du menu principal pour avoir la priorité */
+.menu-bar.v1 .main-menu ul ul li > a,
+.menu-bar.v2 .main-menu ul ul li > a {
+    /* Réinitialiser toutes les propriétés qui pourraient être héritées du menu principal */
+    position: relative !important;
+    display: block;
+    /* Transition fluide pour le fond, la couleur ET le padding */
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease !important;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease !important;
+    -o-transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease !important;
+    transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease !important;
+    /* S'assurer que la couleur par défaut est restaurée */
+    color: var(--color-black) !important;
+    background-color: transparent !important;
+    /* Padding initial */
+    padding-left: 15px !important;
+}
+
+.menu-bar.v1 .main-menu ul ul li > a:hover,
+.menu-bar.v2 .main-menu ul ul li > a:hover {
+    /* Fond coloré au survol (vert clair) */
+    background-color: rgba(76, 175, 80, 0.15) !important;
+    /* Couleur de texte au survol */
+    color: var(--color-deepTealGreen2) !important;
+    /* Décalage du texte vers la droite pour l'effet visuel */
+    padding-left: 25px !important;
+    /* Pas de transform pour éviter les conflits */
+    transform: none !important;
+}
+
+/* S'assurer que le menu principal reste sur une seule ligne */
+/* Mais ne pas affecter les sous-menus (dropdowns) */
+.menu-bar.v1 .main-menu > ul,
+.menu-bar.v2 .main-menu > ul {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.menu-bar.v1 .main-menu > ul > li,
+.menu-bar.v2 .main-menu > ul > li {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Les sous-menus (dropdowns) doivent rester verticaux */
+.menu-bar.v1 .main-menu ul ul,
+.menu-bar.v2 .main-menu ul ul {
+    display: block !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+}
+
+/* S'assurer que le bouton "Obtenir Un Devis" n'est pas affecté */
+.menu-bar.v1 .menu-right .link-anime,
+.menu-bar.v2 .menu-right .link-anime {
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive - Désactiver sur mobile si nécessaire */
+@media (max-width: 991px) {
+    .menu-bar.v1 .main-menu ul li > a::before,
+    .menu-bar.v2 .main-menu ul li > a::before {
+        display: none;
+    }
+    
+}
+

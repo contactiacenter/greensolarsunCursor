@@ -1,0 +1,10 @@
+/* Augmentation de la taille des icônes "Validé" vert sur la page maintenance-et-suivi */
+
+.chackmark.v2 li .fa-check-circle {
+    font-size: 2.2em !important;
+}
+
+.chackmark.v2 li .fas.fa-check-circle.text-success {
+    font-size: 2.2em !important;
+}
+

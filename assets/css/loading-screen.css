@@ -1,0 +1,145 @@
+/* 
+ * Loading Screen Professional - Green Solar Sun
+ * Écran de chargement professionnel avec fond blanc et logo en gros
+ */
+
+/* Overlay plein écran avec fond blanc */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+}
+
+/* Masqué quand la page est chargée */
+#loading-screen.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Container principal du loader */
+#loading-screen .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Container du logo - EN GROS */
+#loading-screen .loading-logo {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    animation: logoFadeIn 1.5s ease-out, logoPulse 3s ease-in-out infinite 1.5s;
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.15));
+}
+
+/* Animation d'apparition du logo - Plus longue */
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.7);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-5px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animation de pulsation du logo - Plus longue et visible */
+@keyframes logoPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    25% {
+        opacity: 0.85;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    75% {
+        opacity: 0.9;
+        transform: scale(0.98);
+    }
+}
+
+/* Spinner circulaire - MASQUÉ */
+#loading-screen .spinner {
+    display: none !important;
+}
+
+/* Barre de progression - Visible et améliorée */
+#loading-screen .progress-bar {
+    width: 300px;
+    height: 5px;
+    background-color: rgba(16, 185, 129, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#loading-screen .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981 0%, #059669 50%, #047857 100%);
+    border-radius: 10px;
+    animation: progress 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+        transform: translateX(0);
+    }
+    40% {
+        width: 50%;
+    }
+    70% {
+        width: 85%;
+    }
+    100% {
+        width: 100%;
+        transform: translateX(300px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #loading-screen .loading-logo {
+        max-width: 250px;
+    }
+    
+    #loading-screen .progress-bar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    #loading-screen .loading-logo {
+        max-width: 200px;
+    }
+    
+    #loading-screen .progress-bar {
+        width: 200px;
+    }
+}

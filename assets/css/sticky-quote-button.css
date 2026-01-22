@@ -1,0 +1,64 @@
+/* Bouton sticky "Obtenir un Devis" */
+.sticky-quote-button {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #07bc4c 0%, #06a03d 100%);
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(7, 188, 76, 0.4);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.sticky-quote-button:hover {
+    background: linear-gradient(135deg, #06a03d 0%, #058832 100%);
+    box-shadow: 0 6px 20px rgba(7, 188, 76, 0.5);
+    transform: translateY(-2px);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.sticky-quote-button i {
+    margin-left: 8px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.sticky-quote-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .sticky-quote-button {
+        bottom: 20px; /* Aligné au même niveau que le bouton WhatsApp */
+        right: 15px;
+        left: auto; /* S'assure que left n'interfère pas */
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Positionner le bouton scroll-to-top au-dessus du bouton "Obtenir un Devis" */
+.scroll-bottom-top.v1 {
+    bottom: 100px !important;
+}
+
+@media (min-width: 1200px) {
+    .scroll-bottom-top.v1 {
+        bottom: 110px !important;
+    }
+}
+
