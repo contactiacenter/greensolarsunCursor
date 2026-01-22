@@ -1,0 +1,14 @@
+/* Augmentation de la taille des icônes "Validé" sur la page borne-de-recharge.html */
+
+.chackmark.v1 li .my-icon.icon-check-circle {
+    font-size: 2.2em !important;
+}
+
+.chackmark.v1 li i.my-icon.icon-check-circle {
+    font-size: 2.2em !important;
+}
+
+.chackmark.v1 li .icon-check-circle {
+    font-size: 2.2em !important;
+}
+

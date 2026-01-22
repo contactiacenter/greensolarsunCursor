@@ -1,0 +1,9 @@
+/* 
+ * Hide Top Bar - Green Solar Sun
+ * Cache la barre verte au-dessus du header
+ */
+
+.top-bar.v1 {
+    display: none !important;
+}
+

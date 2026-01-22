@@ -1,0 +1,35 @@
+/* Vidéo de fond pour le breadcrumb */
+.breadcum {
+    position: relative;
+    overflow: hidden;
+}
+
+.breadcum-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Assurer que le contenu reste au-dessus de la vidéo */
+.breadcum .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Filtre vert comme avant (gradient identique à l'original) */
+.breadcum.v1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-deepTealGreen) 13.1%, rgba(95,183,172,0) 100%);
+    z-index: 0;
+}
+

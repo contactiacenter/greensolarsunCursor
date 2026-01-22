@@ -1,0 +1,79 @@
+/* Système d'onglets pour formulaire de contact */
+.contact-form-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0;
+}
+
+.contact-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+
+.contact-tab-btn:hover {
+    color: #07bc4c;
+}
+
+.contact-tab-btn.active {
+    color: #07bc4c;
+    border-bottom-color: #07bc4c;
+}
+
+.contact-form-wrapper {
+    position: relative;
+}
+
+.contact-form-container {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.contact-form-container.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-tab-btn {
+        width: 100%;
+        text-align: left;
+        border-bottom: 2px solid #e0e0e0;
+        border-left: 3px solid transparent;
+        padding: 15px;
+    }
+    
+    .contact-tab-btn.active {
+        border-left-color: #07bc4c;
+        border-bottom-color: #e0e0e0;
+    }
+}
+
+
