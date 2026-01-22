@@ -1,17 +1,20 @@
-# macOS
+# Fichiers système
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
+ehthumbs.db
+Thumbs.db
 
-# Fichiers de développement
+# Dossiers à exclure
+_astro/
 documentation/
+*.txt
+*.md
+!README.md
+
+# Fichiers de référence
 header_reference.html
 new_head_panneaux.txt
 METHODE_COPIE_HEADER.md
-_astro/
-
-# Fichiers temporaires
-*.tmp
-*.log
