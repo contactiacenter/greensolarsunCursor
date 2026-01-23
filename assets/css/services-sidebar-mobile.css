@@ -1,0 +1,30 @@
+/* 
+ * Masquer la sidebar "Nos Services" et "Contactez-nous" sur mobile
+ * Uniquement pour les pages de services spécifiées :
+ * - Panneaux Solaires
+ * - Clôtures Photovoltaïques
+ * - Carport Photovoltaïque
+ * - Batterie de stockage
+ * - Borne de recharge
+ * - Domotique
+ * Affichage normal sur ordinateur (desktop)
+ */
+
+/* Masquer la sidebar sur mobile pour les pages de services */
+@media (max-width: 991px) {
+    .service-details .col-lg-4 .sidebar__wrapper {
+        display: none !important;
+    }
+    
+    /* Ajuster la largeur du contenu principal sur mobile */
+    .service-details .col-lg-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    
+    /* Supprimer la marge top sur mobile */
+    .service-details .col-lg-8.mt-50.mt-lg-0 {
+        margin-top: 0 !important;
+    }
+}
